@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/find-helper.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>rm: rm - remove files or directories </title>
+<!-- InstanceEndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="autor" content="Korolev Igor">
+<meta name="copyright" content="clihelper.com">
+<META name="Home-url" content="http://www.clihelper.com">
+<meta name="robots" content="index,all">
+<!-- Unix and linux command line utilites helper. Option reminder for unix command line interface. CLI assistant -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name ="keywords" content=" rm, remove,unlink, file, directory, dir, folder, linux, unix,  shell, command line,  option, description, helper, howto,  man, manual">
+<meta name ="description" content="cli helper. Any docs, documents, manual, tutorial about unix and linux command. Option reminder for unix command. rm: rm - remove files or directories ">
+
+<!-- InstanceEndEditable -->
+<LINK REL="stylesheet" TYPE="text/css" HREF="/style.css">
+</head>
+
+<body>
+<table width="90%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="130">&nbsp;</td>
+      <td width="379" align="center"><h1 class="head">
+	rm: rm - remove files or directories 
+	</h1></td>
+      <td width="130" align="right"><!-- InstanceBeginEditable name="Lang" -->
+	  ﻿<!-- InstanceBeginEditable name="Lang" -->
+[english]
+[<a href="http://ru.clihelper.com/rm/index.html">русский</a>]
+<!-- InstanceEndEditable -->
+
+	  <!-- InstanceEndEditable --></td>
+    </tr>
+</table>
+<!-- InstanceBeginEditable name="Menu" -->
+<div id='column1'>
+<table width=125 border=1 cellpadding="2" cellspacing="4">
+  <tr>
+
+	
+	    <td bgcolor='#ECE9FE'><a href="/"> Main </a></td>
+	
+
+  </tr>
+  <tr>
+
+    <td><a href="/docs.html" title="Documentation for helpers"> Docs </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/news" title="Site news"> News </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/about.html" title="About project. CLI helpers"> About project </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/cgi-bin/email.pl"  title="Contact with support"> Contact </a></td>
+
+  </tr>
+  <tr>
+    <td><a href="/clihelper.rss"  title="Contact with support"> Contact </a></td>
+  </tr>
+</table>
+<br>
+
+<br>
+</div>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Body" -->
+
+
+
+<div id='column2'>
+	  <h3 class="page_name">				
+	Linux rm
+	</h3>
+<FORM NAME='form1' ID='form1' action='/'>
+<TABLE border=1 cellpadding="1" cellspacing="0" >
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Binary
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_0_0' ID='f_s_0_0'   onChange="if(this.options[this.selectedIndex].value!=''){window.location=this.options[this.selectedIndex].value};">
+<OPTION VALUE='index.html'  SELECTED> Linux rm </OPTION>
+<OPTION VALUE='solaris.html' > Solaris rm </OPTION>
+<OPTION VALUE='hpux.html' > HP-UX rm </OPTION>
+<OPTION VALUE='aix.html' > AIX rm </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				File(s) or dir(s) you will remove
+			</td>
+			<td>
+				<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_1_150' ID='f_1_150' VALUE='filename.txt'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -f,
+ignore nonexistent files, never prompt' >
+				Ignore nonexistent files, never prompt
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_2_20' ID='f_2_20' VALUE='20'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title='-R or -r
+remove directories and their contents recursively. ' >
+				Remove directories and their contents recursively. 
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_3_120' ID='f_3_120' VALUE='120'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -i
+prompt before every removal' >
+				Prompt before every removal
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_4_30' ID='f_4_30' VALUE='30'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -I
+prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes' >
+				Prompt once before removing more than three files, or when removing recursively
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_5_40' ID='f_5_40' VALUE='40'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				When show prompt
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_6_0' ID='f_s_6_0'  onChange="show_value();">
+<OPTION VALUE='59'  SELECTED>  </OPTION>
+<OPTION VALUE='60' > never </OPTION>
+<OPTION VALUE='70' > once </OPTION>
+<OPTION VALUE='80' > always </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title='  --one-file-system
+when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument' >
+				Skip any directory that is on a file system different from that of the corresponding
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_7_90' ID='f_7_90' VALUE='90'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title='
+ --preserve-root
+do not remove &#39;/&#39; (default)
+' >
+				Preserve root
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_8_0' ID='f_s_8_0'  onChange="show_value();">
+<OPTION VALUE='99'  SELECTED>  </OPTION>
+<OPTION VALUE='100' > do not treat &#39;/&#39; specially </OPTION>
+<OPTION VALUE='110' > do not remove &#39;/&#39; (default) </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title='-v
+explain what is being done' >
+				Verbose explain what is being done
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_9_130' ID='f_9_130' VALUE='130'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' 
+output version information and exit' >
+				Output version information and exit
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_10_140' ID='f_10_140' VALUE='140'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	                    
+
+
+	<tr align=center>
+		<td colspan=2>
+			<TEXTAREA ID='result' NAME='result' rows=3 cols=70>
+			</TEXTAREA>
+		</td>
+	</tr>
+	<tr align=center>
+		<td colspan=2>
+			<INPUT TYPE=button value=' Show command ' ONCLICK="show_value();">
+			<INPUT TYPE=reset value=' Reset ' >
+		</td>
+	</tr>
+</TABLE>
+</FORM>
+
+
+
+<SCRIPT type="text/javascript">
+
+function getObj(objID)
+{
+    if (document.getElementById) {return document.getElementById(objID);}
+    else if (document.all) {return document.all[objID];}
+    else if (document.layers) {return document.layers[objID];}
+}
+
+function show_value() {
+	var f='';
+	var startjoin = {};
+
+
+if(  ( getObj('f_2_20') != null && getObj('f_2_20').checked == false )  ){ 
+						document.getElementById('f_4_30').disabled = false;
+					} else {
+						document.getElementById('f_4_30').disabled = true;
+					}
+
+if(  ( getObj('f_2_20') != null && getObj('f_2_20').checked == false )  ){ 
+						document.getElementById('f_5_40').disabled = false;
+					} else {
+						document.getElementById('f_5_40').disabled = true;
+					}
+
+if(  ( getObj('f_2_20') != null && getObj('f_2_20').checked == false )  ){ 
+						document.getElementById('f_s_6_0').disabled = false;
+					} else {
+						document.getElementById('f_s_6_0').disabled = true;
+					}
+
+if(  ( getObj('f_3_120') != null && getObj('f_3_120').checked )  ){ 
+						document.getElementById('f_7_90').disabled = false;
+					} else {
+						document.getElementById('f_7_90').disabled = true;
+					}
+
+
+					f=f+'rm';
+
+					
+if( getObj('f_2_20') != null && getObj('f_2_20').checked  && document.getElementById('f_2_20').disabled == false) {
+						f=f+' -f';
+					}
+
+					
+if( getObj('f_4_30') != null && getObj('f_4_30').checked  && document.getElementById('f_4_30').disabled == false) {
+						f=f+' -i';
+					}
+
+					
+if( getObj('f_5_40') != null && getObj('f_5_40').checked  && document.getElementById('f_5_40').disabled == false) {
+						f=f+' -I';
+					}
+
+					
+if(getObj( 'f_s_6_0' ).value == '60' && document.getElementById('f_s_6_0').disabled == false ) { 
+						f=f+' --interactive=never';
+					}
+
+					
+if(getObj( 'f_s_6_0' ).value == '70' && document.getElementById('f_s_6_0').disabled == false ) { 
+						f=f+' --interactive=once';
+					}
+
+					
+if(getObj( 'f_s_6_0' ).value == '80' && document.getElementById('f_s_6_0').disabled == false ) { 
+						f=f+' --interactive';
+					}
+
+					
+if( getObj('f_7_90') != null && getObj('f_7_90').checked  && document.getElementById('f_7_90').disabled == false) {
+						f=f+' --one-file-system';
+					}
+
+					
+if(getObj( 'f_s_8_0' ).value == '100' && document.getElementById('f_s_8_0').disabled == false ) { 
+						f=f+' --no-preserve-root';
+					}
+
+					
+if(getObj( 'f_s_8_0' ).value == '110' && document.getElementById('f_s_8_0').disabled == false ) { 
+						f=f+' --preserve-root';
+					}
+
+					
+if( getObj('f_3_120') != null && getObj('f_3_120').checked  && document.getElementById('f_3_120').disabled == false) {
+						f=f+' -r';
+					}
+
+					
+if( getObj('f_9_130') != null && getObj('f_9_130').checked  && document.getElementById('f_9_130').disabled == false) {
+						f=f+' -v';
+					}
+
+					
+if( getObj('f_10_140') != null && getObj('f_10_140').checked  && document.getElementById('f_10_140').disabled == false) {
+						f=f+' --version';
+					}
+
+				if( getObj('f_1_150') != null && getObj('f_1_150').value != ''  && document.getElementById('f_1_150').disabled == false) {	
+					f=f+' '+getObj('f_1_150').value+'';	
+				}
+
+
+	getObj('result').innerHTML=f;
+}
+</SCRIPT>
+
+
+<SCRIPT type="text/javascript">
+
+show_value();
+
+</SCRIPT>
+</div>
+
+<!-- InstanceEndEditable -->
+<div id='cr' align=center><hr size="1" noshade><a href="http://www.clihelper.com">clihelper.com &copy; 2008-2014</a></div> 
+<!-- InstanceBeginEditable name="JavaScripts" -->
+
+<!-- InstanceEndEditable --> 
+</body> 
+<!-- InstanceEnd --></html>
+

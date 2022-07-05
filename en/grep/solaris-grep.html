@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/find-helper.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>cli helper. grep: search a file for a pattern</title>
+<!-- InstanceEndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="autor" content="Korolev Igor">
+<meta name="copyright" content="clihelper.com">
+<META name="Home-url" content="http://www.clihelper.com">
+<meta name="robots" content="index,all">
+<!-- Unix and linux command line utilites helper. Option reminder for unix command line interface. CLI assistant -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name ="keywords" content=" grep, egrep, regular, regex, search, string, substring, line, file,  unix, solaris,  shell, command line,  option, description, helper, howto,  man, manual">
+<meta name ="description" content="cli helper. Any docs, documents, manual, tutorial about unix and linux command. Option reminder for unix command. cli helper. grep: search a file for a pattern">
+
+<!-- InstanceEndEditable -->
+<LINK REL="stylesheet" TYPE="text/css" HREF="/style.css">
+</head>
+
+<body>
+<table width="90%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="130">&nbsp;</td>
+      <td width="379" align="center"><h1 class="head">
+	cli helper. grep: search a file for a pattern
+	</h1></td>
+      <td width="130" align="right"><!-- InstanceBeginEditable name="Lang" -->
+	  ﻿<!-- InstanceBeginEditable name="Lang" -->
+[english]
+[<a href="http://ru.clihelper.com/grep/solaris-grep.html">русский</a>]
+<!-- InstanceEndEditable -->
+
+	  <!-- InstanceEndEditable --></td>
+    </tr>
+</table>
+<!-- InstanceBeginEditable name="Menu" -->
+<div id='column1'>
+<table width=125 border=1 cellpadding="2" cellspacing="4">
+  <tr>
+
+	
+	    <td bgcolor='#ECE9FE'><a href="/"> Main </a></td>
+	
+
+  </tr>
+  <tr>
+
+    <td><a href="/docs.html" title="Documentation for helpers"> Docs </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/news.html" title="Site news"> News </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/about.html" title="About project. CLI helpers"> About project </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/cgi-bin/email.pl"  title="Contact with support"> Contact </a></td>
+
+  </tr>
+</table>
+<br>
+
+<br>
+</div>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Body" -->
+
+
+
+<div id='column2'>
+	  <h3 class="page_name">				
+	Solaris grep
+	</h3>
+<FORM NAME='form1' ID='form1' action='/'>
+<TABLE border=1 cellpadding="1" cellspacing="0" >
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Binary
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_0_0' ID='f_s_0_0'   onChange="if(this.options[this.selectedIndex].value!=''){window.location=this.options[this.selectedIndex].value};">
+<OPTION VALUE='solaris-grep.html'  SELECTED> Solaris /usr/bin/grep </OPTION>
+<OPTION VALUE='solaris-grep-x.html' > Solaris /usr/xpg4/bin/grep </OPTION>
+<OPTION VALUE='index.html' > Linux grep </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Input data from
+			</td>
+			<td>
+				<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_1_14' ID='f_1_14' VALUE='filename1.*'  onChange="show_value();">
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_1_15' ID='f_1_15' VALUE=''  onChange="show_value();">
+<INPUT TYPE=CHECKBOX NAME='f_1_13' ID='f_1_13' VALUE='13'   onChange="show_value();"> From STDIN
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Limited regular expression
+			</td>
+			<td>
+				<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_2_12' ID='f_2_12' VALUE='^Nov 0[123]'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				How to print result
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_3_0' ID='f_s_3_0'  onChange="show_value();">
+<OPTION VALUE=''  SELECTED> Prints the matching lines </OPTION>
+<OPTION VALUE='2' > Prints only a count of the lines that contain the pattern<br> </OPTION>
+<OPTION VALUE='3' > Prints only the names of files with matching lines, separated by NEWLINE characters<br> </OPTION>
+<OPTION VALUE='4' > Quiet. Does not write anything to the standard output, regardless of matching lines<br> </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Precedes each line by the block number on which it was found
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_4_5' ID='f_4_5' VALUE='5'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Prevents the name of the file containing the matching line from being prepended to that line
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_5_6' ID='f_5_6' VALUE='6'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Ignores upper/lower case distinction during comparisons
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_6_7' ID='f_6_7' VALUE='7'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Precedes each line by its line number in the file (first line is 1)
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_7_8' ID='f_7_8' VALUE='8'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Suppresses error messages about nonexistent or unreadable files
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_8_9' ID='f_8_9' VALUE='9'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Prints all lines except those that contain the pattern
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_9_10' ID='f_9_10' VALUE='10'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  >
+				Searches for the expression as a word
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_10_11' ID='f_10_11' VALUE='11'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	                    
+
+
+	<tr align=center>
+		<td colspan=2>
+			<TEXTAREA ID='result' NAME='result' rows=3 cols=70>
+			</TEXTAREA>
+		</td>
+	</tr>
+	<tr align=center>
+		<td colspan=2>
+			<INPUT TYPE=button value=' Show command ' ONCLICK="show_value();">
+			<INPUT TYPE=reset value=' Reset ' >
+		</td>
+	</tr>
+</TABLE>
+</FORM>
+
+
+
+<SCRIPT type="text/javascript">
+
+function getObj(objID)
+{
+    if (document.getElementById) {return document.getElementById(objID);}
+    else if (document.all) {return document.all[objID];}
+    else if (document.layers) {return document.layers[objID];}
+}
+
+function show_value() {
+	var f='';
+	var startjoin = {};
+
+
+if(  ( getObj('f_1_13') != null && getObj('f_1_13').checked == false )  ){ 
+						document.getElementById('f_1_14').disabled = false;
+					} else {
+						document.getElementById('f_1_14').disabled = true;
+					}
+
+if(  ( getObj('f_1_13') != null && getObj('f_1_13').checked == false )  ){ 
+						document.getElementById('f_1_15').disabled = false;
+					} else {
+						document.getElementById('f_1_15').disabled = true;
+					}
+
+
+					f=f+'/usr/bin/grep';
+
+					
+if(getObj( 'f_s_3_0' ).value == '2' && document.getElementById('f_s_3_0').disabled == false ) { 
+						f=f+' -c';
+					}
+
+					
+if(getObj( 'f_s_3_0' ).value == '3' && document.getElementById('f_s_3_0').disabled == false ) { 
+						f=f+' -l';
+					}
+
+					
+if(getObj( 'f_s_3_0' ).value == '4' && document.getElementById('f_s_3_0').disabled == false ) { 
+						f=f+' -q';
+					}
+
+					
+if( getObj('f_4_5') != null && getObj('f_4_5').checked  && document.getElementById('f_4_5').disabled == false) {
+						f=f+' -b';
+					}
+
+					
+if( getObj('f_5_6') != null && getObj('f_5_6').checked  && document.getElementById('f_5_6').disabled == false) {
+						f=f+' -h';
+					}
+
+					
+if( getObj('f_6_7') != null && getObj('f_6_7').checked  && document.getElementById('f_6_7').disabled == false) {
+						f=f+' -i';
+					}
+
+					
+if( getObj('f_7_8') != null && getObj('f_7_8').checked  && document.getElementById('f_7_8').disabled == false) {
+						f=f+' -n';
+					}
+
+					
+if( getObj('f_8_9') != null && getObj('f_8_9').checked  && document.getElementById('f_8_9').disabled == false) {
+						f=f+' -s';
+					}
+
+					
+if( getObj('f_9_10') != null && getObj('f_9_10').checked  && document.getElementById('f_9_10').disabled == false) {
+						f=f+' -v';
+					}
+
+					
+if( getObj('f_10_11') != null && getObj('f_10_11').checked  && document.getElementById('f_10_11').disabled == false) {
+						f=f+' -w';
+					}
+
+				if( getObj('f_2_12') != null && getObj('f_2_12').value != ''  && document.getElementById('f_2_12').disabled == false) {	
+					f=f+' "'+getObj('f_2_12').value+'"';	
+				}
+
+					
+if( getObj('f_1_13') != null && getObj('f_1_13').checked  && document.getElementById('f_1_13').disabled == false) {
+						f=f+' ';
+					}
+
+				if( getObj('f_1_14') != null && getObj('f_1_14').value != ''  && document.getElementById('f_1_14').disabled == false) {	
+					f=f+' '+getObj('f_1_14').value+'';	
+				}
+
+				if( getObj('f_1_15') != null && getObj('f_1_15').value != ''  && document.getElementById('f_1_15').disabled == false) {	
+					f=f+' '+getObj('f_1_15').value+'';	
+				}
+
+
+	getObj('result').innerHTML=f;
+}
+</SCRIPT>
+
+
+<SCRIPT type="text/javascript">
+
+show_value();
+
+</SCRIPT>
+</div>
+
+<!-- InstanceEndEditable -->
+<div id='cr' align=center><hr size="1" noshade><a href="http://www.clihelper.com">clihelper.com &copy; 2008-2013</a></div> 
+<!-- InstanceBeginEditable name="JavaScripts" -->
+
+<!-- InstanceEndEditable --> 
+</body> 
+<!-- InstanceEnd --></html>
+

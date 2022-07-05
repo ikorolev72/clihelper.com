@@ -1,0 +1,572 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/find-helper.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>df - report file system disk space usage </title>
+<!-- InstanceEndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="autor" content="Korolev Igor">
+<meta name="copyright" content="clihelper.com">
+<META name="Home-url" content="http://www.clihelper.com">
+<meta name="robots" content="index,all">
+<!-- Unix and linux command line utilites helper. Option reminder for unix command line interface. CLI assistant -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name ="keywords" content=" df, disk usage, report, file, system, space, block size, size, filesystem, unix, linux,  shell, command line,  option, description, helper, howto,  man, manual">
+<meta name ="description" content="cli helper. Any docs, documents, manual, tutorial about unix and linux command. Option reminder for unix command. df - report file system disk space usage ">
+
+<!-- InstanceEndEditable -->
+<LINK REL="stylesheet" TYPE="text/css" HREF="/style.css">
+</head>
+
+<body>
+<table width="90%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="130">&nbsp;</td>
+      <td width="379" align="center"><h1 class="head">
+	df - report file system disk space usage 
+	</h1></td>
+      <td width="130" align="right"><!-- InstanceBeginEditable name="Lang" -->
+	  ﻿<!-- InstanceBeginEditable name="Lang" -->
+[english]
+[<a href="http://ru.clihelper.com/df/index.html">русский</a>]
+<!-- InstanceEndEditable -->
+
+	  <!-- InstanceEndEditable --></td>
+    </tr>
+</table>
+<!-- InstanceBeginEditable name="Menu" -->
+<div id='column1'>
+<table width=125 border=1 cellpadding="2" cellspacing="4">
+  <tr>
+
+	
+	    <td bgcolor='#ECE9FE'><a href="/"> Main </a></td>
+	
+
+  </tr>
+  <tr>
+
+    <td><a href="/docs.html" title="Documentation for helpers"> Docs </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/news" title="Site news"> News </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/about.html" title="About project. CLI helpers"> About project </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/cgi-bin/email.pl"  title="Contact with support"> Contact </a></td>
+
+  </tr>
+  <tr>
+    <td><a href="/clihelper.rss"  title="Contact with support"> Contact </a></td>
+  </tr>
+</table>
+<br>
+
+<br>
+</div>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Body" -->
+
+
+
+<div id='column2'>
+	  <h3 class="page_name">				
+	Linux df
+	</h3>
+<FORM NAME='form1' ID='form1' action='/'>
+<TABLE border=1 cellpadding="1" cellspacing="0" >
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title='file or directory' >
+				File or directory
+			</td>
+			<td>
+				<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_0_1210' ID='f_0_1210' VALUE=''  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -k
+like --block-size=1K
+ -k
+like --block-size=1M
+ -h
+print sizes in human readable format (e.g., 1K 234M 2G)
+ -H
+likewise, but use powers of 1000 not 1024' >
+				Show size in
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_1_0' ID='f_s_1_0'  onChange="show_value();">
+<OPTION VALUE='99'  SELECTED> default </OPTION>
+<OPTION VALUE='100' > kilobytes </OPTION>
+<OPTION VALUE='110' > megabites </OPTION>
+<OPTION VALUE='120' > human readable format (e.g., 1K 234M 2G) </OPTION>
+<OPTION VALUE='130' > human readable format use powers of 1000 not 1024 </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -B
+use SIZE-byte blocks' >
+				Show size use SIZE-byte blocks
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_2_145' ID='f_2_145' VALUE='145'   onChange="show_value();"> 
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_2_150' ID='f_2_150' VALUE='512'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -i
+list inode information instead of block usage' >
+				List inode information instead of block usage
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_3_40' ID='f_3_40' VALUE='40'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' --direct
+show statistics for a file instead of mount point' >
+				Show statistics for a file instead of mount point
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_4_50' ID='f_4_50' VALUE='50'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' --sync
+invoke sync before getting usage info
+' >
+				Make sync before getting usage info
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_5_0' ID='f_s_5_0'  onChange="show_value();">
+<OPTION VALUE='69'  SELECTED> do not invoke sync (default) </OPTION>
+<OPTION VALUE='70' > do not invoke sync (show option) </OPTION>
+<OPTION VALUE='80' > invoke sync </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -P
+use the POSIX output format' >
+				Use the POSIX output format
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_6_90' ID='f_6_90' VALUE='90'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -T
+print file system type' >
+				Print file system type
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_7_1190' ID='f_7_1190' VALUE='1190'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -x
+limit listing to file systems not of type TYPE
+ -t
+limit listing to file systems of type TYPE' >
+				Limit listing to file systems
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_8_155' ID='f_8_155' VALUE='155'   onChange="show_value();"> 
+<SELECT SIZE=1 NAME='f_s_8_0' ID='f_s_8_0'  onChange="show_value();">
+<OPTION VALUE='160' > of type </OPTION>
+<OPTION VALUE='185' > not of type </OPTION>
+</SELECT>
+<SELECT SIZE=1 NAME='f_s_8_1' ID='f_s_8_1'  onChange="show_value();">
+<OPTION VALUE='200' > cifs </OPTION>
+<OPTION VALUE='210' > minix </OPTION>
+<OPTION VALUE='220' > ext </OPTION>
+<OPTION VALUE='230' > ext2 </OPTION>
+<OPTION VALUE='240' > ext3 </OPTION>
+<OPTION VALUE='250' > ext4 </OPTION>
+<OPTION VALUE='260' > Reiserfs </OPTION>
+<OPTION VALUE='270' > XFS </OPTION>
+<OPTION VALUE='280' > JFS </OPTION>
+<OPTION VALUE='290' > xiafs </OPTION>
+<OPTION VALUE='300' > msdos </OPTION>
+<OPTION VALUE='310' > umsdos </OPTION>
+<OPTION VALUE='320' > vfat </OPTION>
+<OPTION VALUE='330' > ntfs </OPTION>
+<OPTION VALUE='340' > proc </OPTION>
+<OPTION VALUE='350' > iso9660 </OPTION>
+<OPTION VALUE='360' > hpfs </OPTION>
+<OPTION VALUE='370' > sysv </OPTION>
+<OPTION VALUE='380' > nfs </OPTION>
+<OPTION VALUE='390' > smb </OPTION>
+<OPTION VALUE='400' > ncpfs </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -a
+include dummy file systems' >
+				Include dummy file systems
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_9_20' ID='f_9_20' VALUE='20'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' -l
+limit listing to local file systems' >
+				Limit listing to local file systems
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_10_30' ID='f_10_30' VALUE='30'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' --total
+produce a grand total' >
+				Produce a grand total
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_11_60' ID='f_11_60' VALUE='60'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE valign=top>
+			<td align=right  class=tooltip title=' --version
+output version information and exit' >
+				Output version information and exit
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_12_1200' ID='f_12_1200' VALUE='1200'   onChange="show_value();"> 
+
+			</td>
+		</tr>
+
+	                    
+
+
+	<tr align=center>
+		<td colspan=2>
+			<TEXTAREA ID='result' NAME='result' rows=3 cols=70>
+			</TEXTAREA>
+		</td>
+	</tr>
+	<tr align=center>
+		<td colspan=2>
+			<INPUT TYPE=button value=' Show command ' ONCLICK="show_value();">
+			<INPUT TYPE=reset value=' Reset ' >
+		</td>
+	</tr>
+</TABLE>
+</FORM>
+
+
+
+<SCRIPT type="text/javascript">
+
+function getObj(objID)
+{
+    if (document.getElementById) {return document.getElementById(objID);}
+    else if (document.all) {return document.all[objID];}
+    else if (document.layers) {return document.layers[objID];}
+}
+
+function show_value() {
+	var f='';
+	var startjoin = {};
+
+
+if(  ( getObj('f_0_1210') != null && getObj('f_0_1210').value != '' )  ){ 
+						document.getElementById('f_4_50').disabled = false;
+					} else {
+						document.getElementById('f_4_50').disabled = true;
+					}
+
+if(  ( getObj('f_2_145') != null && getObj('f_2_145').checked == false )  ){ 
+						document.getElementById('f_s_1_0').disabled = false;
+					} else {
+						document.getElementById('f_s_1_0').disabled = true;
+					}
+
+if(  ( getObj('f_2_145') != null && getObj('f_2_145').checked )  ){ 
+						document.getElementById('f_2_150').disabled = false;
+					} else {
+						document.getElementById('f_2_150').disabled = true;
+					}
+
+if(  ( getObj('f_8_155') != null && getObj('f_8_155').checked )  ){ 
+						document.getElementById('f_s_8_0').disabled = false;
+					} else {
+						document.getElementById('f_s_8_0').disabled = true;
+					}
+
+if(  ( getObj('f_8_155') != null && getObj('f_8_155').checked )  ){ 
+						document.getElementById('f_s_8_1').disabled = false;
+					} else {
+						document.getElementById('f_s_8_1').disabled = true;
+					}
+
+
+					f=f+'df';
+
+					
+if( getObj('f_9_20') != null && getObj('f_9_20').checked  && document.getElementById('f_9_20').disabled == false) {
+						f=f+' -a';
+					}
+
+					
+if( getObj('f_10_30') != null && getObj('f_10_30').checked  && document.getElementById('f_10_30').disabled == false) {
+						f=f+' -l';
+					}
+
+					
+if( getObj('f_3_40') != null && getObj('f_3_40').checked  && document.getElementById('f_3_40').disabled == false) {
+						f=f+' -i';
+					}
+
+					
+if( getObj('f_4_50') != null && getObj('f_4_50').checked  && document.getElementById('f_4_50').disabled == false) {
+						f=f+' --direct';
+					}
+
+					
+if( getObj('f_11_60') != null && getObj('f_11_60').checked  && document.getElementById('f_11_60').disabled == false) {
+						f=f+' --total';
+					}
+
+					
+if(getObj( 'f_s_5_0' ).value == '70' && document.getElementById('f_s_5_0').disabled == false ) { 
+						f=f+' --no-sync';
+					}
+
+					
+if(getObj( 'f_s_5_0' ).value == '80' && document.getElementById('f_s_5_0').disabled == false ) { 
+						f=f+' --sync';
+					}
+
+					
+if( getObj('f_6_90') != null && getObj('f_6_90').checked  && document.getElementById('f_6_90').disabled == false) {
+						f=f+' -P';
+					}
+
+					
+if(getObj( 'f_s_1_0' ).value == '100' && document.getElementById('f_s_1_0').disabled == false ) { 
+						f=f+' -k';
+					}
+
+					
+if(getObj( 'f_s_1_0' ).value == '110' && document.getElementById('f_s_1_0').disabled == false ) { 
+						f=f+' -m';
+					}
+
+					
+if(getObj( 'f_s_1_0' ).value == '120' && document.getElementById('f_s_1_0').disabled == false ) { 
+						f=f+' -h';
+					}
+
+					
+if(getObj( 'f_s_1_0' ).value == '130' && document.getElementById('f_s_1_0').disabled == false ) { 
+						f=f+' -H';
+					}
+
+					
+if( getObj('f_2_145') != null && getObj('f_2_145').checked  && document.getElementById('f_2_145').disabled == false) {
+						f=f+' -B';
+					}
+
+				if( getObj('f_2_150') != null && getObj('f_2_150').value != ''  && document.getElementById('f_2_150').disabled == false) {	
+					f=f+' '+getObj('f_2_150').value+'';	
+				}
+
+					
+if(getObj( 'f_s_8_0' ).value == '160' && document.getElementById('f_s_8_0').disabled == false ) { 
+						f=f+' -t';
+					}
+
+					
+if(getObj( 'f_s_8_0' ).value == '185' && document.getElementById('f_s_8_0').disabled == false ) { 
+						f=f+' -x';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '200' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' cifs';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '210' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' minix';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '220' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' ext';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '230' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' ext2';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '240' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' ext3';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '250' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' ext4';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '260' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' Reiserfs';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '270' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' XFS';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '280' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' JFS';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '290' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' xiafs';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '300' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' msdos';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '310' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' umsdos';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '320' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' vfat';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '330' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' ntfs';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '340' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' proc';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '350' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' iso9660';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '360' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' hpfs';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '370' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' sysv';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '380' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' nfs';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '390' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' smb';
+					}
+
+					
+if(getObj( 'f_s_8_1' ).value == '400' && document.getElementById('f_s_8_1').disabled == false ) { 
+						f=f+' ncpfs';
+					}
+
+					
+if( getObj('f_7_1190') != null && getObj('f_7_1190').checked  && document.getElementById('f_7_1190').disabled == false) {
+						f=f+' -T';
+					}
+
+					
+if( getObj('f_12_1200') != null && getObj('f_12_1200').checked  && document.getElementById('f_12_1200').disabled == false) {
+						f=f+' --version';
+					}
+
+				if( getObj('f_0_1210') != null && getObj('f_0_1210').value != ''  && document.getElementById('f_0_1210').disabled == false) {	
+					f=f+' '+getObj('f_0_1210').value+'';	
+				}
+
+
+	getObj('result').innerHTML=f;
+}
+</SCRIPT>
+
+
+<SCRIPT type="text/javascript">
+
+show_value();
+
+</SCRIPT>
+</div>
+
+<!-- InstanceEndEditable -->
+<div id='cr' align=center><hr size="1" noshade><a href="http://www.clihelper.com">clihelper.com &copy; 2008-2014</a></div> 
+<!-- InstanceBeginEditable name="JavaScripts" -->
+
+<!-- InstanceEndEditable --> 
+</body> 
+<!-- InstanceEnd --></html>
+

@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/find-helper.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>cli helper. useradd: Создание нового пользователя в системе</title>
+<!-- InstanceEndEditable -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="autor" content="Korolev Igor">
+<meta name="copyright" content="unixpin.com">
+<META name="Home-url" content="http://ru.clihelper.com">
+<meta name="robots" content="index,all">
+<!-- Unix and linux find command helper. Option reminder for unix command find -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name ="keywords" content=" useradd, new user, add, passwd, shadow, login, group, security,  unix, linux,  shell, command line,  option, description, helper, howto,  man, manual">
+<meta name ="description" content="cli helper. Any docs, documents, manual, tutorial about unix and linux command. Option reminder for unix command. cli helper. useradd: �������� ������ ������������ � �������">
+
+<!-- InstanceEndEditable -->
+<LINK REL="stylesheet" TYPE="text/css" HREF="/style.css">
+</head>
+
+<body>
+<table width="90%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td width="130">&nbsp;</td>
+      <td width="379" align="center"><h1 class="head">
+	cli helper. useradd: Создание нового пользователя в системе
+	</h1></td>
+      <td width="130" align="right"><!-- InstanceBeginEditable name="Lang" -->
+	  ﻿<!-- InstanceBeginEditable name="Lang" -->
+[<a href="http://www.clihelper.com/useradd/useradd-linux-01.html">english</a>]
+[русский]
+<!-- InstanceEndEditable -->
+
+	  <!-- InstanceEndEditable --></td>
+    </tr>
+</table>
+<!-- InstanceBeginEditable name="Menu" -->
+<div id='column1'>
+<table width=125 border=1 cellpadding="2" cellspacing="4">
+  <tr>
+
+	
+	    <td bgcolor='#ECE9FE'><a href="/"> Все помощники </a></td>
+	
+
+  </tr>
+  <tr>
+
+    <td><a href="/docs.html" title="Документация"> Документация </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/news" title="Новости сайта"> Новости </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/about.html" title="О проекте. CLI helpers"> О проекте </a></td>
+
+  </tr>
+  <tr>
+
+    <td><a href="/cgi-bin/email.pl"  title="Написать в поддержку"> Контакты </a></td>
+
+  </tr>
+</table>
+<br>
+
+<br>
+</div>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="Body" -->
+
+<div id='column2'>
+	  <h3 class="page_name">				
+	Linux useradd
+	</h3>
+<FORM NAME='form1' ID='form1' action='/'>
+<TABLE border=1 cellpadding="1" cellspacing="0" >
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Исполняемый файл
+
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_0_0' ID='f_s_0_0'   onChange="if(this.options[this.selectedIndex].value!=''){window.location=this.options[this.selectedIndex].value};">
+<OPTION VALUE='useradd-solaris-01.html' > Solaris useradd </OPTION>
+<OPTION VALUE='useradd-linux-01.html'  SELECTED> Linux useradd </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Действие
+
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_1_0' ID='f_s_1_0'   onChange="if(this.options[this.selectedIndex].value!=''){window.location=this.options[this.selectedIndex].value};">
+<OPTION VALUE='index.html' > Создать нового пользователя
+ </OPTION>
+<OPTION VALUE='useradd-linux-00.html' > Отобразить значения &quot;по умолчанию&quot; для новых пользователей
+ </OPTION>
+<OPTION VALUE='useradd-linux-01.html'  SELECTED> Изменить значения &quot;по умолчанию&quot; для нового пользователя
+ </OPTION>
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Изменить путь домашнего каталога для новых пользователей
+
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_2_20' ID='f_2_20' VALUE='20'   onChange="show_value();"> 
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_2_30' ID='f_2_30' VALUE='/home'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Изменить дату, после которой запись пользователя будет блокирована
+
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_3_80' ID='f_3_80' VALUE='80'   onChange="show_value();"> 
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_3_90' ID='f_3_90' VALUE='2038-01-17'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Изменить количество дней с истекшим паролем, после которых  запись пользователя будет блокирована
+
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_4_100' ID='f_4_100' VALUE='100'   onChange="show_value();"> 
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_4_110' ID='f_4_110' VALUE='-1'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Изменить каталог, который содержит базовые (skeleton) данные профиля пользователя (файл .profile итд)
+
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_5_180' ID='f_5_180' VALUE='180'   onChange="show_value();"> 
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_5_190' ID='f_5_190' VALUE='/etc/skel'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Изменить номер группы (GUID) по умолчанию для нового пользователя
+
+			</td>
+			<td>
+				<INPUT TYPE=CHECKBOX NAME='f_6_120' ID='f_6_120' VALUE='120'   onChange="show_value();"> 
+<INPUT TYPE=TEXT SIZE=12 MAXLENGTH=128 NAME='f_6_130' ID='f_6_130' VALUE='100'  onChange="show_value();">
+
+			</td>
+		</tr>
+
+	 
+		<tr bgcolor=#ECE9FE >
+			<td align=right  valign=top>
+				Изменить оболочку (shell) для новых пользователей
+
+			</td>
+			<td>
+				<SELECT SIZE=1 NAME='f_s_7_0' ID='f_s_7_0'  onChange="show_value();">
+<OPTION VALUE='310'  SELECTED> default (/bin/sh) </OPTION>
+<OPTION VALUE='301' > /usr/bin/bash </OPTION>
+<OPTION VALUE='302' > /usr/bin/ksh </OPTION>
+<OPTION VALUE='303' > /usr/bin/date </OPTION>
+<OPTION VALUE='304' > /usr/bin/true </OPTION>
+<OPTION VALUE='305' > /usr/bin/false </OPTION>
+
+			</td>
+		</tr>
+
+	                    
+
+
+	<tr align=center>
+		<td colspan=2>
+			<TEXTAREA ID='result' NAME='result' rows=3 cols=70>
+			</TEXTAREA>
+		</td>
+	</tr>
+	<tr align=center>
+		<td colspan=2>
+			<INPUT TYPE=button value=' Show command ' ONCLICK="show_value();">
+			<INPUT TYPE=reset value=' Reset ' >
+		</td>
+	</tr>
+</TABLE>
+</FORM>
+
+
+<SCRIPT type="text/javascript">
+
+function getObj(objID)
+{
+    if (document.getElementById) {return document.getElementById(objID);}
+    else if (document.all) {return document.all[objID];}
+    else if (document.layers) {return document.layers[objID];}
+}
+
+function show_value() {
+	var f='';
+	var startjoin = {};
+
+
+if(  ( getObj('f_2_20') != null && getObj('f_2_20').checked )  ){ 
+						document.getElementById('f_2_30').disabled = false;
+					} else {
+						document.getElementById('f_2_30').disabled = true;
+					}
+
+if(  ( getObj('f_3_80') != null && getObj('f_3_80').checked )  ){ 
+						document.getElementById('f_3_90').disabled = false;
+					} else {
+						document.getElementById('f_3_90').disabled = true;
+					}
+
+if(  ( getObj('f_4_100') != null && getObj('f_4_100').checked )  ){ 
+						document.getElementById('f_4_110').disabled = false;
+					} else {
+						document.getElementById('f_4_110').disabled = true;
+					}
+
+if(  ( getObj('f_6_120') != null && getObj('f_6_120').checked )  ){ 
+						document.getElementById('f_6_130').disabled = false;
+					} else {
+						document.getElementById('f_6_130').disabled = true;
+					}
+
+if(  ( getObj('f_5_180') != null && getObj('f_5_180').checked )  ){ 
+						document.getElementById('f_5_190').disabled = false;
+					} else {
+						document.getElementById('f_5_190').disabled = true;
+					}
+
+
+					f=f+'useradd';
+
+					f=f+' -D';
+
+					
+if( getObj('f_2_20') != null && getObj('f_2_20').checked  && document.getElementById('f_2_20').disabled == false) {
+						f=f+' -b';
+					}
+
+				if( getObj('f_2_30') != null && getObj('f_2_30').value != ''  && document.getElementById('f_2_30').disabled == false) {	
+					f=f+' '+getObj('f_2_30').value+'';	
+				}
+
+					
+if( getObj('f_3_80') != null && getObj('f_3_80').checked  && document.getElementById('f_3_80').disabled == false) {
+						f=f+' -e';
+					}
+
+				if( getObj('f_3_90') != null && getObj('f_3_90').value != ''  && document.getElementById('f_3_90').disabled == false) {	
+					f=f+' '+getObj('f_3_90').value+'';	
+				}
+
+					
+if( getObj('f_4_100') != null && getObj('f_4_100').checked  && document.getElementById('f_4_100').disabled == false) {
+						f=f+' -f';
+					}
+
+				if( getObj('f_4_110') != null && getObj('f_4_110').value != ''  && document.getElementById('f_4_110').disabled == false) {	
+					f=f+' '+getObj('f_4_110').value+'';	
+				}
+
+					
+if( getObj('f_6_120') != null && getObj('f_6_120').checked  && document.getElementById('f_6_120').disabled == false) {
+						f=f+' -g';
+					}
+
+				if( getObj('f_6_130') != null && getObj('f_6_130').value != ''  && document.getElementById('f_6_130').disabled == false) {	
+					f=f+' '+getObj('f_6_130').value+'';	
+				}
+
+					
+if( getObj('f_5_180') != null && getObj('f_5_180').checked  && document.getElementById('f_5_180').disabled == false) {
+						f=f+' -k';
+					}
+
+				if( getObj('f_5_190') != null && getObj('f_5_190').value != ''  && document.getElementById('f_5_190').disabled == false) {	
+					f=f+' '+getObj('f_5_190').value+'';	
+				}
+
+					
+if(getObj( 'f_s_7_0' ).value == '301' && document.getElementById('f_s_7_0').disabled == false ) { 
+						f=f+' -s /usr/bin/bash';
+					}
+
+					
+if(getObj( 'f_s_7_0' ).value == '302' && document.getElementById('f_s_7_0').disabled == false ) { 
+						f=f+' -s /usr/bin/ksh';
+					}
+
+					
+if(getObj( 'f_s_7_0' ).value == '303' && document.getElementById('f_s_7_0').disabled == false ) { 
+						f=f+' -s /usr/bin/date';
+					}
+
+					
+if(getObj( 'f_s_7_0' ).value == '304' && document.getElementById('f_s_7_0').disabled == false ) { 
+						f=f+' -s /usr/bin/true';
+					}
+
+					
+if(getObj( 'f_s_7_0' ).value == '305' && document.getElementById('f_s_7_0').disabled == false ) { 
+						f=f+' -s /usr/bin/false';
+					}
+
+					
+if(getObj( 'f_s_7_0' ).value == '310' && document.getElementById('f_s_7_0').disabled == false ) { 
+						f=f+' ';
+					}
+
+
+	getObj('result').innerHTML=f;
+}
+</SCRIPT>
+
+
+<SCRIPT type="text/javascript">
+
+show_value();
+
+</SCRIPT>
+</div>
+
+<!-- InstanceEndEditable -->
+<div id='cr' align=center><hr size="1" noshade><a href="http://www.clihelper.com">www.clihelper.com &copy; 2008-2014</a></div> 
+<!-- InstanceBeginEditable name="JavaScripts" -->
+
+<!-- InstanceEndEditable --> 
+</body> 
+<!-- InstanceEnd --></html>
